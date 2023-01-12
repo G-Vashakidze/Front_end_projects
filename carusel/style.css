@@ -1,0 +1,70 @@
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 800px;
+    height: 530px; 
+    z-index: 1;
+} 
+.leftDiv{
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    opacity: 0;
+    left: 0;
+    z-index: 2;
+}
+.rightDiv{
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    opacity: 0;
+    right: 0;
+    z-index: 2;
+}
+.leftDiv:hover{
+    cursor: pointer;
+}
+.rightDiv:hover{
+    cursor: pointer;
+}
+
+.img{
+    width: 800px;
+    height: 500px;
+    object-fit: cover; 
+}
+.image-container{
+    display: flex;
+   
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    background-color: crimson; 
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.9%;
+}
+.btn:hover{
+    opacity: 0.85;
+}
+.btn:focus{
+    outline: none;
+}
